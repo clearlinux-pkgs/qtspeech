@@ -4,7 +4,7 @@
 #
 Name     : qtspeech
 Version  : 5.11.2
-Release  : 5
+Release  : 6
 URL      : http://download.qt.io/official_releases/qt/5.11/5.11.2/submodules/qtspeech-everywhere-src-5.11.2.tar.xz
 Source0  : http://download.qt.io/official_releases/qt/5.11/5.11.2/submodules/qtspeech-everywhere-src-5.11.2.tar.xz
 Summary  : No detailed summary available
@@ -62,7 +62,7 @@ test -r config.log && cat config.log
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1537308464
+export SOURCE_DATE_EPOCH=1537312082
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/doc/qtspeech
 cp LICENSE.FDL %{buildroot}/usr/share/doc/qtspeech/LICENSE.FDL
