@@ -4,7 +4,7 @@
 #
 Name     : qtspeech
 Version  : 5.15.2
-Release  : 20
+Release  : 21
 URL      : https://download.qt.io/official_releases/qt/5.15/5.15.2/submodules/qtspeech-everywhere-src-5.15.2.tar.xz
 Source0  : https://download.qt.io/official_releases/qt/5.15/5.15.2/submodules/qtspeech-everywhere-src-5.15.2.tar.xz
 Summary  : No detailed summary available
@@ -18,6 +18,7 @@ BuildRequires : pkgconfig(Qt5Core)
 BuildRequires : pkgconfig(Qt5Multimedia)
 BuildRequires : pkgconfig(Qt5Test)
 BuildRequires : pkgconfig(Qt5Widgets)
+Patch1: qtspeech-stable-branch.patch
 
 %description
 No detailed description available
@@ -62,6 +63,7 @@ license components for the qtspeech package.
 %prep
 %setup -q -n qtspeech-everywhere-src-5.15.2
 cd %{_builddir}/qtspeech-everywhere-src-5.15.2
+%patch1 -p1
 
 %build
 export http_proxy=http://127.0.0.1:9/
@@ -74,7 +76,7 @@ test -r config.log && cat config.log
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1630807104
+export SOURCE_DATE_EPOCH=1645110761
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/qtspeech
 cp %{_builddir}/qtspeech-everywhere-src-5.15.2/LICENSE.FDL %{buildroot}/usr/share/package-licenses/qtspeech/61907422fefcd2313a9b570c31d203a6dbebd333
