@@ -7,6 +7,10 @@ Jani Heikkinen (1):
 Jeremy Whiting (1):
       Reverse list of voices before returning from Speech-Dispatcher
 
+Tarja Sundqvist (2):
+      Update commercial license headers
+      Revert "Update commercial license headers"
+
 diff --git a/src/plugins/tts/speechdispatcher/qtexttospeech_speechd.cpp b/src/plugins/tts/speechdispatcher/qtexttospeech_speechd.cpp
 index 6eb74b8..bcc7dd1 100644
 --- a/src/plugins/tts/speechdispatcher/qtexttospeech_speechd.cpp
