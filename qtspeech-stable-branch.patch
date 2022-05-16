@@ -1,15 +1,17 @@
 Antti Kokko (1):
       Add changes file for Qt 5.15.2
 
-Jani Heikkinen (1):
+Jani Heikkinen (2):
+      Bump version
       Bump version
 
 Jeremy Whiting (1):
       Reverse list of voices before returning from Speech-Dispatcher
 
-Tarja Sundqvist (2):
+Tarja Sundqvist (3):
       Update commercial license headers
       Revert "Update commercial license headers"
+      Merge remote-tracking branch 'origin/tqtc/lts-5.15.4' into tqtc/lts-5.15-opensource
 
 diff --git a/src/plugins/tts/speechdispatcher/qtexttospeech_speechd.cpp b/src/plugins/tts/speechdispatcher/qtexttospeech_speechd.cpp
 index 6eb74b8..bcc7dd1 100644
