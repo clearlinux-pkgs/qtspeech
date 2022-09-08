@@ -4,7 +4,7 @@
 #
 Name     : qtspeech
 Version  : 5.15.2
-Release  : 24
+Release  : 25
 URL      : https://download.qt.io/official_releases/qt/5.15/5.15.2/submodules/qtspeech-everywhere-src-5.15.2.tar.xz
 Source0  : https://download.qt.io/official_releases/qt/5.15/5.15.2/submodules/qtspeech-everywhere-src-5.15.2.tar.xz
 Summary  : No detailed summary available
@@ -76,12 +76,12 @@ test -r config.log && cat config.log
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1655665322
+export SOURCE_DATE_EPOCH=1662657487
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/qtspeech
-cp %{_builddir}/qtspeech-everywhere-src-5.15.2/LICENSE.FDL %{buildroot}/usr/share/package-licenses/qtspeech/61907422fefcd2313a9b570c31d203a6dbebd333
-cp %{_builddir}/qtspeech-everywhere-src-5.15.2/LICENSE.GPLv2 %{buildroot}/usr/share/package-licenses/qtspeech/78287b08861c4e3c6393a7873c08bc3b8005d02c
-cp %{_builddir}/qtspeech-everywhere-src-5.15.2/LICENSE.LGPLv3 %{buildroot}/usr/share/package-licenses/qtspeech/d8c5ba35d57eceb2e56ace166048cb901a2d12ed
+cp %{_builddir}/qtspeech-everywhere-src-%{version}/LICENSE.FDL %{buildroot}/usr/share/package-licenses/qtspeech/61907422fefcd2313a9b570c31d203a6dbebd333 || :
+cp %{_builddir}/qtspeech-everywhere-src-%{version}/LICENSE.GPLv2 %{buildroot}/usr/share/package-licenses/qtspeech/78287b08861c4e3c6393a7873c08bc3b8005d02c || :
+cp %{_builddir}/qtspeech-everywhere-src-%{version}/LICENSE.LGPLv3 %{buildroot}/usr/share/package-licenses/qtspeech/d8c5ba35d57eceb2e56ace166048cb901a2d12ed || :
 %make_install
 
 %files
